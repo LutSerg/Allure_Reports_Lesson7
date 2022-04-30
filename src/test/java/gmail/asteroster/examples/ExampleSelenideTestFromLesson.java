@@ -1,3 +1,5 @@
+package gmail.asteroster.examples;
+
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -5,12 +7,12 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selectors.withText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 import static org.openqa.selenium.By.linkText;
 import static org.openqa.selenium.By.partialLinkText;
 
 public class ExampleSelenideTestFromLesson {
+
 
     @Test
     @DisplayName("Хороший тест")
@@ -26,5 +28,6 @@ public class ExampleSelenideTestFromLesson {
         $(linkText("eroshenkoam/allure-example")).click();
         $(partialLinkText("Issues")).click();
         $(withText("#76")).click();
+        sleep(3000);
     }
 }
